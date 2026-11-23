@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile — Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Css/style.css" />
+</head>
+<body data-page="profile">
+  <div class="app-layout">
+    <div id="sidebarMount"></div>
+
+    <main class="main-content">
+      <div id="topbarMount"></div>
+
+      <div class="profile-card">
+        <div class="profile-header">
+          <div class="profile-avatar-lg" id="profileAvatar">?</div>
+          <div>
+            <h2 id="profileName">—</h2>
+            <p id="profileEmail">—</p>
+          </div>
+        </div>
+
+        <div class="profile-row">
+          <span class="label">Full name</span>
+          <span class="value" id="pfName">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Email</span>
+          <span class="value" id="pfEmail">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Joined</span>
+          <span class="value" id="pfJoined">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Total transactions</span>
+          <span class="value" id="pfTxCount">0</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Current balance</span>
+          <span class="value" id="pfBalance">₹0</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Storage</span>
+          <span class="value">Browser Local Storage</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Auth method</span>
+          <span class="value">JWT Token</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">JWT Role</span>
+          <span class="value" id="pfJwtRole">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Token expires</span>
+          <span class="value" id="pfJwtExp">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Token preview</span>
+          <span class="value" id="pfJwtPreview" style="font-size:11px;max-width:220px;overflow:hidden;text-overflow:ellipsis;">—</span>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/jwt.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

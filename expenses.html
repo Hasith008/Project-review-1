@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Expense — Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="expenses">
+  <div class="app-layout">
+    <div id="sidebarMount"></div>
+    <main class="main-content">
+      <div id="topbarMount"></div>
+      <div class="form-page-grid">
+        <div class="form-intro-card">
+          <div class="eyebrow">Money Out</div>
+          <h2>Add expense</h2>
+          <p>Record everyday spending so your dashboard reflects where your money is going.</p>
+        </div>
+        <div class="form-panel">
+          <div class="eyebrow">New Entry</div>
+          <h3>Expense details</h3>
+          <form id="expenseForm">
+            <div class="form-group">
+              <label for="expAmount">Amount (₹)</label>
+              <input type="number" id="expAmount" placeholder="e.g. 3500" min="1" step="any" required />
+            </div>
+            <div class="form-group">
+              <label for="expCategory">Category</label>
+              <select id="expCategory" required></select>
+            </div>
+            <div class="form-group">
+              <label for="expMethod">Payment Method</label>
+              <select id="expMethod" required></select>
+            </div>
+            <div class="form-group">
+              <label for="expNote">Note</label>
+              <input type="text" id="expNote" placeholder="e.g. SDC Project Lab Components" />
+            </div>
+            <div class="form-group">
+              <label for="expDate">Date</label>
+              <input type="date" id="expDate" required />
+            </div>
+            <button type="submit" class="btn-primary">
+              Save expense <span class="arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="js/jwt.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transactions — Expense Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="transactions">
+  <div class="app-layout">
+    <div id="sidebarMount"></div>
+    <main class="main-content">
+      <div id="topbarMount"></div>
+      <div class="panel">
+        <div class="panel-header">
+          <div>
+            <div class="eyebrow">History</div>
+            <h3>All transactions</h3>
+          </div>
+        </div>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="income">Income</button>
+          <button class="filter-btn" data-filter="expense">Expenses</button>
+        </div>
+        <div class="filter-bar" style="margin-top:-8px;margin-bottom:20px;">
+          <button class="method-btn active" data-method="all">All Methods</button>
+          <button class="method-btn" data-method="Cash">💵 Cash</button>
+          <button class="method-btn" data-method="Bank">🏦 Bank</button>
+          <button class="method-btn" data-method="Net Banking">💻 Net Banking</button>
+          <button class="method-btn" data-method="Credit Card">💳 Credit Card</button>
+          <button class="method-btn" data-method="UPI">📱 UPI</button>
+        </div>
+        <table class="transactions-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Category</th>
+              <th>Method</th>
+              <th>Note</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="txBody"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="js/jwt.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
